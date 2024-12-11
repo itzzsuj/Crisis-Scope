@@ -1,70 +1,116 @@
-# Getting Started with Create React App
+# Crisis Scope
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Crisis Scope is a comprehensive disaster management platform designed to streamline the process of collecting, organizing, and addressing rescue, aid, and food requests during a crisis. The platform leverages real-time data and analytics to optimize disaster response efforts, improve efficiency, and ensure effective coordination among rescue teams and volunteers.
 
-## Available Scripts
+## Small Preview
+<img width="1422" alt="Screenshot 2024-12-11 at 1 37 50 PM" src="https://github.com/user-attachments/assets/ba0d55f5-20e1-49ab-80c8-ba399bb75309">
 
-In the project directory, you can run:
 
-### npm start
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Core Functionalities
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Food Requests Management**: View, update, and delete food requests categorized by urgency levels (Critical, High, Medium, Low).
+- **Aid Requests Management**: Track and manage aid-related requests to ensure timely assistance.
+- **Rescue Requests Management**: Organize rescue operations with real-time updates on pending requests.
+- **Real-Time Analytics**: Visualize the urgency levels of food requests using dynamic pie charts powered by Chart.js.
 
-### npm test
+### Advanced Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Firebase Integration**: Data storage and retrieval are handled using Firebase Firestore for seamless synchronization.
+- **Urgency-Based Sorting**: Requests are automatically sorted based on urgency levels to prioritize critical actions.
+- **Interactive Dashboard**: A user-friendly interface to navigate through different request categories and analytics.
+- **Responsive Design**: Optimized for various devices, ensuring accessibility for all users.
 
-### npm run build
+## Technology Stack
 
-Builds the app for production to the build folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Frontend**: React.js
+- **Backend**: Firebase Firestore
+- **Visualization**: Python(Streamlit)
+- **Styling**: Tailwind CSS
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Prerequisites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Before running this project, ensure you have the following installed:
 
-### npm run eject
+- Node.js (version 16 or later)
+- Firebase CLI
+- A Firebase project with Firestore configured
 
-**Note: this is a one-way operation. Once you eject, you can't go back!**
+## Getting Started
 
-If you aren't satisfied with the build tool and configuration choices, you can eject at any time. This command will remove the single build dependency from your project.
+### 1. Clone the Repository
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except eject will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+git clone https://github.com/your-username/crisis-scope.git
+cd crisis-scope
+```
 
-You don't have to ever use eject. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 2. Install Dependencies
 
-## Learn More
+```bash
+npm install
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 3. Configure Firebase
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Create a Firebase project in the [Firebase Console](https://console.firebase.google.com/).
+- Enable Firestore Database.
+- Replace the Firebase configuration in `firebase/firebase.js` with your project credentials:
 
-### Code Splitting
+```javascript
+const firebaseConfig = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_AUTH_DOMAIN",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_STORAGE_BUCKET",
+  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+  appId: "YOUR_APP_ID",
+};
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 4. Run the Application
 
-### Analyzing the Bundle Size
+```bash
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The app will be available at [http://localhost:3000](http://localhost:3000).
 
-### Making a Progressive Web App
+## Folder Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```
+crisis-scope/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── FoodRequests.js
+│   │   ├── AidRequests.js
+│   │   ├── RescueRequests.js
+│   │   ├── Analytics.js
+│   ├── firebase/
+│   │   └── firebase.js
+│   ├── App.js
+│   ├── index.js
+├── README.md
+├── package.json
+```
 
-### Advanced Configuration
+## How It Works
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+1. **Requests Management**: Each category (Food, Aid, Rescue) fetches data from Firebase Firestore and displays it in an organized manner.
+2. **Real-Time Updates**: Any changes made to the requests are instantly reflected across all connected users.
+3. **Analytics**: Food request urgency levels are visualized in a pie chart for better decision-making.
+4. **Interactive UI**: Navigate through requests and analytics seamlessly.
 
-### Deployment
+## Future Enhancements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Add geolocation-based request mapping.
+- Enable user authentication and role-based access.
+- Integrate AI-based prediction models for disaster impact assessment.
+- Expand analytics to include aid and rescue requests.
 
-### npm run build fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+Thank you for using Crisis Scope to make disaster management more effective and efficient!
