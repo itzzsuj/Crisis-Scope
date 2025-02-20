@@ -1,7 +1,7 @@
 # Machine Learning in Crisis Scope
 Crisis Scope incorporates AI-driven analytics to enhance disaster management and resource allocation. The ML models provide real-time impact assessment, urgency prediction, and optimization for food, aid, and rescue operations.
 
-🛠️ ML Features
+🛠️ ML Features:
 Disaster Impact Prediction – Uses ML models to assess disaster severity and prioritize aid distribution.
 Urgency-Based Prioritization – Automatically classifies food, aid, and rescue requests into Critical, High, Medium, and Low urgency levels.
 Real-Time Demand Forecasting – Predicts future aid and food requests based on historical trends and real-time inputs.
