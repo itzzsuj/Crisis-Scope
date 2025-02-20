@@ -14,7 +14,7 @@ Disaster Impact Prediction	CNN, LSTMs
 Demand Forecasting	Time Series Analysis (ARIMA, LSTM)
 Resource Optimization	Linear Programming (PuLP, SciPy)
 Geospatial Analysis	K-Means Clustering, Heatmap Visualization
-📂 ML Workflow>
+📂 ML Workflow>>
 Data Collection – Gathers request data from Firebase Firestore.
 Data Preprocessing – Cleans and prepares data for ML models.
 Feature Engineering – Extracts key parameters such as location, urgency level, and request trends.
