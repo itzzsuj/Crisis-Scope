@@ -26,4 +26,4 @@ Model Deployment – Hosted on Firebase ML Kit for seamless integration.
 Programming Language: Python
 Libraries Used: TensorFlow, scikit-learn, XGBoost, Pandas, NumPy, Matplotlib, Seaborn
 Visualization: Streamlit (for interactive ML dashboards)
-Deployment: Firebase ML Kit, FastAPI
+Deployment:  FastAPI
